@@ -2,16 +2,22 @@ from django.shortcuts import render
 import requests
 # Create your views here.
 
-def iplocation():
+def home(request):
+    return render(request , 'home.html')
+
+def index(request):
+    return render(request, 'index.html')
+
+def iplocation(request):
     pass
 
-def fraudEmail():
+def fraudEmail(request):
     pass
 
-def phoneOSINT():
+def phoneOSINT(request):
     pass
 
-def fraudLink():
+def fraudLink(request):
     pass
 
 
