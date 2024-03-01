@@ -21,5 +21,6 @@ from functionalities import views as fviews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',fviews.index,name=''),
-    path('home',fviews.home,name='home')
+    path('home/',fviews.home,name='home'),
+    path('home/fmaildet.html',fviews.fraudEmail,name='fmaildet')
 ]

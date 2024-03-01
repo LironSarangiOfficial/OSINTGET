@@ -8,11 +8,10 @@ def home(request):
 def index(request):
     return render(request, 'index.html')
 
-def iplocation(request):
-    pass
 
 def fraudEmail(request):
-    pass
+    
+    return render(request, 'fmaildet.html')
 
 def phoneOSINT(request):
     pass

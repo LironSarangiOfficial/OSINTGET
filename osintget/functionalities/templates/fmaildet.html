@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINTGET</title>
+    <link rel="stylesheet" href="{% static "home.css" %}">
+    <link rel="icon" href="../static/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+   body {
+    /* overflow: hidden; */
+    background-image: url(https://video-public.canva.com/VADbyINEcbk/p/31acdd4a3b.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+}
+.inpbox{
+    border: 0.2rem solid cyan;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    color: aliceblue;
+}
+</style>
+<body>
+    <nav>
+        <h1>OSINTGET</h1>
+        <div>
+          <a href="/">HOME</a>
+          <a href="https://youtube.com/shorts/cAag-jbW12E?feature=share/">ABOUT</a>
+          
+        </div>
+    </nav>
+
+    
+    <div class="flex">
+        <form action='./home/fmaildet' method='POST'>
+            <div class="form-group">
+              {% csrf_token %}
+              <label class='inpbox' for="emailid">Enter your Email address</label>
+              <input type="email" class="form-control" id="emailid" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+
+            <button type="submit" style='border-color: lightblue;' class="btn btn-primary bg-info">Check</button>
+          </form>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+</body>
+</html>
